@@ -2,6 +2,8 @@
 
 import { getProfileByUsername, getUserPosts, updateProfile } from "@/actions/profile.action";
 import { toggleFollow } from "@/actions/user.action";
+import SpotifyActivity from "@/components/Activity";
+import SpotifyLogin from "@/components/LoginSpotify";
 import PostCard from "@/components/PostCard";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -125,6 +127,9 @@ function ProfilePageClient({
                     </div>
                   </div>
                 </div>
+                {/* <div className="w-full">
+                    <SpotifyActivity/>
+                </div> */}
 
                 {/* "FOLLOW & EDIT PROFILE" BUTTONS */}
                 {!currentUser ? (
@@ -264,6 +269,9 @@ function ProfilePageClient({
                   placeholder="Your personal website"
                 />
               </div>
+            </div>
+            <div className="w-full">
+                <SpotifyLogin/>
             </div>
             <div className="flex justify-end gap-3">
               <DialogClose asChild>
